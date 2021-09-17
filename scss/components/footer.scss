@@ -1,0 +1,29 @@
+footer {
+    background-color: #488f53;
+    padding: 40px;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    h5 {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    nav {
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+        }
+        a:hover {
+            color: #fff;
+        }
+        svg {
+            width: 2%;
+            transition: all ease 28ms;
+        }
+        svg:hover{
+            transform: scale(1.2,1.2);
+        }
+    }
+}

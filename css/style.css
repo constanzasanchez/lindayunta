@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+header .navbar-light img {
+  width: 6%; }
+header .navbar-light .navbar-nav .nav-link {
+  color: #000; }
+header .navbar-light .navbar-nav .nav-link:hover {
+  text-decoration: underline; }
+
+.productos {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px; }
+  .productos h1 {
+    margin: 20px;
+    text-align: center;
+    font-weight: 300; }
+  .productos .col {
+    text-align: center; }
+    .productos .col .btn-comprar {
+      padding: 10px 20px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background-color: #fff;
+      color: black; }
+    .productos .col .btn-comprar:hover {
+      background-color: #b0949c;
+      color: #fff;
+      border: 2px solid #fff; }
+
+footer {
+  background-color: #488f53;
+  padding: 40px;
+  margin-top: 20px;
+  text-align: center;
+  color: #fff; }
+  footer h5 {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 300; }
+  footer nav a {
+    text-decoration: none;
+    color: white;
+    padding: 20px; }
+  footer nav a:hover {
+    color: #fff; }
+  footer nav svg {
+    width: 2%;
+    transition: all ease 28ms; }
+  footer nav svg:hover {
+    transform: scale(1.2, 1.2); }
+
+/*# sourceMappingURL=style.css.map */
