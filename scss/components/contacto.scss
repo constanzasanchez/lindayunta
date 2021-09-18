@@ -1,0 +1,65 @@
+.contacto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    .contenedorImg {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        img {
+        width: 500px;
+        border-radius: 260px;
+        opacity: 0.5;
+        transition: $animate2;
+        &:hover{
+            opacity: 1;
+        }}}
+        .contenedorForm {
+            width: 50%;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-flow: column;
+            background-color: #fff;
+            h2 {
+                font-weight: 400;
+                font-size: 1.6rem;
+                margin-bottom: 30px;}
+            .form {
+                display: flex;
+                flex-flow: column;
+                .grupoForm {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-evenly;
+                    padding: 10px;
+                    label {
+                        margin-bottom: 10px;
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                    }
+                    input, textarea {
+                        padding: 5px;
+                        border: 2px solid rgba(#000000, 0.4);
+                        border-radius: 5px;
+                    }
+                }
+                .btn-form {
+                    display: block;
+                    border: 2px solid #000;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    width: fit-content;
+                    padding: 12px 24px;
+                    margin: 10px auto;
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+}

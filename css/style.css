@@ -9,44 +9,53 @@
 body {
   font-family: 'Open Sans', sans-serif; }
 
-header .navbar-light {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px; }
-  header .navbar-light img {
-    width: 80px; }
-  header .navbar-light .navbar-nav {
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff; }
+  header .navbar-light {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transition all ease 28ms; }
-    header .navbar-light .navbar-nav .nav-link {
-      color: #000;
-      display: inline-block;
-      position: relative;
-      margin: 0 15px; }
-      header .navbar-light .navbar-nav .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        transform-origin: bottom right;
-        transition: transform 28ms ease-out; }
-      header .navbar-light .navbar-nav .nav-link:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left; }
-      header .navbar-light .navbar-nav .nav-link:hover {
-        color: #000; }
-    header .navbar-light .navbar-nav .carrito svg {
-      width: 40px;
-      margin: 0 30px 0 15px; }
-      header .navbar-light .navbar-nav .carrito svg:hover {
-        transform: scale(1.2, 1.2); }
+    padding: 10px 40px; }
+    header .navbar-light img {
+      width: 80px; }
+    header .navbar-light .navbar-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transition all ease 28ms; }
+      header .navbar-light .navbar-nav .nav-link {
+        color: #000;
+        display: inline-block;
+        position: relative;
+        margin: 0 15px; }
+        header .navbar-light .navbar-nav .nav-link::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #000;
+          transform-origin: bottom right;
+          transition: transform 28ms ease-out; }
+        header .navbar-light .navbar-nav .nav-link:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left; }
+        header .navbar-light .navbar-nav .nav-link:hover {
+          color: #000; }
+      header .navbar-light .navbar-nav .carrito svg {
+        width: 40px;
+        margin: 0 30px 0 15px; }
+        header .navbar-light .navbar-nav .carrito svg:hover {
+          transform: scale(1.2, 1.2); }
+
+.main {
+  margin-top: 116px; }
 
 .contenedorAbout {
   width: 90%;
@@ -116,5 +125,62 @@ footer {
     transition: all ease 28ms; }
   footer nav svg:hover {
     transform: scale(1.2, 1.2); }
+
+.contacto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px; }
+  .contacto .contenedorImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    .contacto .contenedorImg img {
+      width: 500px;
+      border-radius: 260px;
+      opacity: 0.5;
+      transition: transition all ease 28ms; }
+      .contacto .contenedorImg img:hover {
+        opacity: 1; }
+  .contacto .contenedorForm {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
+    background-color: #fff; }
+    .contacto .contenedorForm h2 {
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 30px; }
+    .contacto .contenedorForm .form {
+      display: flex;
+      flex-flow: column; }
+      .contacto .contenedorForm .form .grupoForm {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        padding: 10px; }
+        .contacto .contenedorForm .form .grupoForm label {
+          margin-bottom: 10px;
+          font-size: 1.1rem;
+          font-weight: 400; }
+        .contacto .contenedorForm .form .grupoForm input, .contacto .contenedorForm .form .grupoForm textarea {
+          padding: 5px;
+          border: 2px solid rgba(0, 0, 0, 0.4);
+          border-radius: 5px; }
+      .contacto .contenedorForm .form .btn-form {
+        display: block;
+        border: 2px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        width: fit-content;
+        padding: 12px 24px;
+        margin: 10px auto; }
+        .contacto .contenedorForm .form .btn-form:hover {
+          background-color: #000;
+          color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
