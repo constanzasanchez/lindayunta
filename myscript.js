@@ -1,8 +1,8 @@
-function saludo() {
-    let nombre = prompt('Escribe tu nombre');
-    alert('Bienvenido/a'+ nombre);
-}
-saludo();
+//function saludo() {
+//    let nombre = prompt('Escribe tu nombre');
+//    alert('Bienvenido/a'+ nombre);
+//}
+//saludo();
 
 class Productos {
     constructor(nombre, precio){

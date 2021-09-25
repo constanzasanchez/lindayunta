@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");
 * {
   margin: 0;
@@ -7,7 +8,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Yaldevi', 'Open Sans', sans-serif; }
 
 header {
   position: fixed;
@@ -55,38 +56,146 @@ header {
           transform: scale(1.2, 1.2); }
 
 .main {
-  margin-top: 116px; }
+  margin-top: 115px; }
 
-.contenedorAbout {
-  width: 90%;
-  margin: 40px auto;
-  padding: 20px;
+.about .contenedor1 {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 150px 300px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #b0949c; }
-  .contenedorAbout .textoYunta {
-    width: 60%;
-    padding: 20px;
-    text-align: justify;
-    color: #fff;
-    font-weight: 300; }
-    .contenedorAbout .textoYunta h1 {
-      font-size: 2rem;
-      margin-bottom: 20px; }
-    .contenedorAbout .textoYunta p {
+  justify-content: space-around;
+  align-content: center; }
+  .about .contenedor1 .texto1 {
+    width: 50%; }
+    .about .contenedor1 .texto1 h3 {
+      font-size: 1.2rem;
+      letter-spacing: 5px; }
+      .about .contenedor1 .texto1 h3 span {
+        font-weight: 600; }
+  .about .contenedor1 .texto2 {
+    width: 50%; }
+    .about .contenedor1 .texto2 .negrita {
+      font-weight: 600;
+      font-size: 1.2rem; }
+    .about .contenedor1 .texto2 p {
+      font-size: 1.2rem; }
+.about .contenedor2 {
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 80px 300px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center; }
+  .about .contenedor2 .left-img {
+    width: 50%;
+    margin-top: -200px;
+    margin-left: -120px; }
+    .about .contenedor2 .left-img img {
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .about .contenedor2 .textoYunta {
+    width: 50%;
+    margin-left: 120px;
+    text-align: justify; }
+    .about .contenedor2 .textoYunta p {
       font-size: 1.2rem;
       line-height: 40px; }
-  .contenedorAbout .videoYunta {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+      .about .contenedor2 .textoYunta p span {
+        font-weight: 600; }
+    .about .contenedor2 .textoYunta .negrita {
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 40px; }
 
+@media only screen and (min-width: 200px) and (max-width: 549px) {
+  .about .contenedor1 {
+    padding: 140px 10px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center; }
+    .about .contenedor1 .texto1 {
+      margin-bottom: 25px; }
+      .about .contenedor1 .texto1 h3 {
+        font-size: 1rem; }
+    .about .contenedor1 .texto2 p {
+      font-size: 1rem; }
+    .about .contenedor1 .texto2 .negrita {
+      font-size: 1rem; }
+  .about .contenedor2 {
+    padding: 60px 60px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center; }
+    .about .contenedor2 .left-img {
+      width: 60%;
+      margin-top: -140px;
+      margin-left: 0;
+      display: flex;
+      justify-content: center; }
+    .about .contenedor2 .textoYunta {
+      width: 100%;
+      margin: 50px auto; }
+      .about .contenedor2 .textoYunta p {
+        font-size: 1rem; }
+      .about .contenedor2 .textoYunta .negrita {
+        font-size: 1rem; } }
+@media only screen and (min-width: 550px) and (max-width: 779px) {
+  .about .contenedor1 {
+    padding: 140px 60px; }
+  .about .contenedor2 {
+    padding: 60px 60px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center; }
+    .about .contenedor2 .left-img {
+      width: 60%;
+      margin-top: -140px;
+      margin-left: 0;
+      display: flex;
+      justify-content: center; }
+    .about .contenedor2 .textoYunta {
+      width: 100%;
+      margin: 50px auto; } }
+@media only screen and (min-width: 780px) and (max-width: 990px) {
+  .about .contenedor1 {
+    padding: 150px 80px; }
+  .about .contenedor2 {
+    padding: 60px 60px; }
+    .about .contenedor2 .left-img {
+      width: 50%;
+      margin-top: -150px;
+      margin-left: 10px; }
+    .about .contenedor2 .textoYunta {
+      margin-left: 60px; } }
+@media only screen and (min-width: 990px) and (max-width: 1100px) {
+  .about .contenedor1 {
+    padding: 150px 120px; }
+  .about .contenedor2 {
+    padding: 80px 120px; }
+    .about .contenedor2 .left-img {
+      width: 50%;
+      margin-top: -160px;
+      margin-left: -60px; }
+    .about .contenedor2 .textoYunta {
+      margin-left: 80px; } }
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+  .about .contenedor1 {
+    padding: 150px 250px; }
+  .about .contenedor2 {
+    padding: 80px 250px; }
+    .about .contenedor2 .left-img {
+      width: 50%;
+      margin-top: -200px;
+      margin-left: -100px; }
+    .about .contenedor2 .textoYunta {
+      margin-left: 100px; } }
 .productos {
   width: 90%;
-  margin: 60px auto;
-  padding: 20px; }
+  margin: 0 auto;
+  padding: 120px 50px; }
   .productos h2 {
     margin-bottom: 40px;
     text-align: center;
@@ -121,11 +230,16 @@ footer {
   footer nav a:hover {
     color: #fff; }
   footer nav svg {
-    width: 2%;
+    width: 30px;
     transition: all ease 28ms; }
   footer nav svg:hover {
     transform: scale(1.2, 1.2); }
 
+@media only screen and (min-width: 200px) and (max-width: 900px) {
+  footer h5 {
+    font-size: 1rem; }
+  footer nav svg {
+    width: 20px; } }
 .contacto {
   margin-top: 85px;
   display: flex;
