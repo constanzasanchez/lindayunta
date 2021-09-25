@@ -243,14 +243,15 @@ footer {
 .contacto {
   margin-top: 85px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 40px; }
   .contacto .contenedorImg {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-content: center; }
+    align-content: center;
+    padding: 40px; }
     .contacto .contenedorImg img {
       width: 500px;
       border-radius: 260px;
@@ -259,8 +260,9 @@ footer {
       .contacto .contenedorImg img:hover {
         opacity: 1; }
   .contacto .contenedorForm {
-    width: 30%;
+    width: fit-content;
     padding: 30px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     align-content: center;
@@ -298,5 +300,25 @@ footer {
         .contacto .contenedorForm .form .btn-form:hover {
           background-color: #000;
           color: #fff; }
+
+@media only screen and (min-width: 780px) and (max-width: 1100px) {
+  .contacto {
+    display: flex;
+    justify-content: space-between; }
+    .contacto .contenedorImg {
+      width: 50%; }
+      .contacto .contenedorImg img {
+        width: 300px; }
+    .contacto .contenedorForm .form .grupoForm input, .contacto .contenedorForm .form .grupoForm textarea {
+      width: 150px; } }
+@media only screen and (min-width: 200px) and (max-width: 779px) {
+  .contacto {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
+    .contacto .contenedorImg {
+      width: 50%; }
+      .contacto .contenedorImg img {
+        width: 300px; } }
 
 /*# sourceMappingURL=style.css.map */
