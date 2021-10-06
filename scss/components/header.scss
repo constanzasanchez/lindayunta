@@ -41,9 +41,16 @@ header {
                 }
               }
             .carrito {
+                background-color: transparent;
+                border: 0;
+                margin: 0 30px 0 15px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 svg {
-                    width: 40px;
-                    margin: 0 30px 0 15px;
+                    width: 100%;
+                    margin-right: 4px;
                     &:hover{
                         transform: scale(1.2,1.2);
                     }}}

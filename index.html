@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/productos.js" defer></script>
     <script src="js/dom.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/carrito.js" defer></script>
     <title>Lindayunta - Objetos que cuelgan</title>
 </head>
 <body>
@@ -49,7 +51,7 @@
                   <li class="nav-item">
                       <a class="nav-link" href="contacto.html">Contacto</a>
                   </li>
-                  <a class="carrito" href="#carrito"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <button class="carrito" href="#carrito" id="boton-carrito"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 321.2 321.2" style="enable-background:new 0 0 321.2 321.2;" xml:space="preserve">
                  <g><g><path d="M306.4,313.2l-24-223.6c-0.4-3.6-3.6-6.4-7.2-6.4h-44.4V69.6c0-38.4-31.2-69.6-69.6-69.6c-38.4,0-69.6,31.2-69.6,69.6
                        v13.6H46c-3.6,0-6.8,2.8-7.2,6.4l-24,223.6c-0.4,2,0.4,4,1.6,5.6c1.2,1.6,3.2,2.4,5.2,2.4h278c2,0,4-0.8,5.2-2.4
@@ -59,8 +61,8 @@
                        L52.4,97.2h39.2v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2
                        V97.2h110.4v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2V97.2
                        H270l22.4,209.2H30z"/>
-                   </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                 </a>
+                   </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                  </svg><span id="contador-carrito">0</span></button>
              </ul>
            </div>
          </div>
@@ -120,10 +122,36 @@
     <!--Comienza Productos-->
     <section class="productos" id="productos">
         <h2>Objetos que cuelgan.</h2>
+        <select id="talles">
+          <option value="all">Todos</option>
+          <option value="L">Large</option>
+          <option value="M">Medium</option>
+          <option value="S">Small</option>
+      </select>
+      <select id="precios">
+          <option value="0">Todos</option>
+          <option value="1">0 - 5000</option>
+          <option value="2">+5000</option>
+      </select>
+      <input type="text" id="buscador">
         <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-3" id="contenedorProductos">
+          <!--Se agregan productos en JS-->
         </div>
     </section>
-    <!--Finaliza Productos-->
+  <!--Finaliza Productos-->
+  <!--Comienza Modal-->
+      <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+            </path></svg></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        </div>
+      </div>
+    <!--Finaliza Modal-->
     <!--Comienza Footer-->
     <footer>
         <h5>Seguinos en nuestras redes o envianos un mensaje</h5>
