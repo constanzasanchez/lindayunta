@@ -44,7 +44,8 @@ const actualizarCarrito = () => {
         contenedorCarrito.appendChild(div);
     })
 
-    contadorCarrito.innerText = cart.reduce((acc, prod) => acc += prod.cantidad, 0);
+    contadorCarrito.innerText = cart.length;
+    //cart.reduce((acc, prod) => acc += prod.cantidad, 0);
     precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
 }
 
@@ -57,7 +58,6 @@ const eliminarProducto = (itemId) => {
     if (producto.cantidad === 0) {
         const index = cart.indexOf(producto);
         cart.splice(index, 1);
-    }
-   
+    }   
     actualizarCarrito();
 }

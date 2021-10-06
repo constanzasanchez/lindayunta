@@ -255,10 +255,22 @@ header {
         outline: none; }
     .modal-contenedor .modal-carrito .precioProducto {
       padding-top: 10px; }
-    .modal-contenedor .modal-carrito .boton-eliminar {
-      width: 20px;
-      background-color: transparent;
-      border: none; }
+    .modal-contenedor .modal-carrito #carrito-contenedor {
+      max-width: 60vw;
+      display: flex;
+      align-content: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap; }
+      .modal-contenedor .modal-carrito #carrito-contenedor .productoEnCarrito {
+        padding: 20px;
+        margin: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        text-align: center; }
+        .modal-contenedor .modal-carrito #carrito-contenedor .productoEnCarrito .boton-eliminar {
+          width: 20px;
+          background-color: transparent;
+          border: none; }
 
 .modal-active {
   opacity: 1;

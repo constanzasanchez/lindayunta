@@ -32,12 +32,26 @@
             outline: none;}}
         .precioProducto {
             padding-top: 10px;}
-        .boton-eliminar {
-            width: 20px;
-            background-color: transparent;
-            border: none;}
+        #carrito-contenedor{
+            max-width: 60vw;
+            display: flex;
+            align-content: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            .productoEnCarrito {
+                padding: 20px;
+                margin: 20px;
+                border: 1px solid #000;
+                border-radius: 5px;
+                text-align: center;
+                .boton-eliminar {
+                    width: 20px;
+                    background-color: transparent;
+                    border: none;}
+                }
+            }
+        }
     }
-}
 .modal-active {
     opacity: 1;
     visibility: visible;

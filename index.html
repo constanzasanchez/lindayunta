@@ -22,10 +22,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/productos.js" defer></script>
-    <script src="js/dom.js" defer></script>
-    <script src="js/modal.js" defer></script>
-    <script src="js/carrito.js" defer></script>
+    <script defer src="js/productos.js"></script>
+    <script defer src="js/dom.js"></script>
+    <script defer src="js/modal.js"></script>
+    <script defer src="js/carrito.js"></script>
     <title>Lindayunta - Objetos que cuelgan</title>
 </head>
 <body>
@@ -62,7 +62,7 @@
                        V97.2h110.4v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2V97.2
                        H270l22.4,209.2H30z"/>
                    </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                  </svg><span id="contador-carrito">0</span></button>
+                  </svg><span id="contadorCarrito">0</span></button>
              </ul>
            </div>
          </div>
@@ -122,16 +122,20 @@
     <!--Comienza Productos-->
     <section class="productos" id="productos">
         <h2>Objetos que cuelgan.</h2>
-        <select id="talles">
+        <select id="tipos">
           <option value="all">Todos</option>
-          <option value="L">Large</option>
-          <option value="M">Medium</option>
-          <option value="S">Small</option>
+          <option value="helado">Helados</option>
+          <option value="palo">Palos</option>
+          <option value="boomerang">Boomerangs</option>
+          <option value="cubik">Cubiks</option>
+          <option value="dado">Dados</option>
+          <option value="bom">Bombs</option>
+          <option value="caramelo">Caramelos</option>
       </select>
       <select id="precios">
           <option value="0">Todos</option>
-          <option value="1">0 - 5000</option>
-          <option value="2">+5000</option>
+          <option value="1">0 - 1500</option>
+          <option value="2">+1500</option>
       </select>
       <input type="text" id="buscador">
         <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-3" id="contenedorProductos">
