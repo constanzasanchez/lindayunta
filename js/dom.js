@@ -1,7 +1,10 @@
 //Accedo a la seccion productos para crear las cards de cada producto automaticamente
 const contenedorProductos = document.getElementById('contenedorProductos');
 
-allProducts.forEach((producto) => {
+
+const showProducts = (array) => {
+  contenedorProductos.innerHTML = '';
+  array.forEach((producto) => {
   //Agrego Iva
   producto.precio = producto.precio * 1.21;
   //Agrego divs por cada producto que esta en el array
@@ -16,4 +19,7 @@ allProducts.forEach((producto) => {
                       </div>
                    </div>`;  
 contenedorProductos.appendChild(div);
-})
+});
+}
+
+showProducts(allProducts);
