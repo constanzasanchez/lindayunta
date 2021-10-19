@@ -7,7 +7,7 @@ const showProducts = (array) => {
   array.forEach((producto) => {
   //Agrego Iva
   producto.precio = producto.precio * 1.21;
-  //Agrego divs por cada producto que esta en el array
+  //Agrego divs por cada producto que esta en el array  
   const div = document.createElement('div');
   div.className = "col";
   div.innerHTML = `<div class="card">
@@ -23,3 +23,4 @@ contenedorProductos.appendChild(div);
 }
 
 showProducts(allProducts);
+

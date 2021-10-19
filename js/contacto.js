@@ -8,22 +8,31 @@
 //se vuelve a cargar la pagina se reinician los datos
 
 const formulario = document.getElementById("formulario");
-formulario.addEventListener("submit", mostrarFormulario);
+
+//formulario.addEventListener("submit", mostrarFormulario);
 
 let valorNombreUsuario = nombreUsuario.value;
 let valorApellidoUsuario = apellidoUsuario.value;
 let valorEmailUsuario = emailUsuario.value;
 let valorMensajeUsuario = mensajeUsuario.value;
 
+$('#formulario').click(function(){
+    mostrarFormulario();
+}); 
+
+$('#formulario').keypress(function(e) {
+    if(e.which == 13) {
+        mostrarFormulario();
+    }
+ });
+
 function mostrarFormulario(e) {
     e.preventDefault();
-    console.log("Formulario Enviado");
-
+    console.log("Formulario enviado:");
     console.log(valorNombreUsuario);
     console.log(valorApellidoUsuario);
     console.log(valorEmailUsuario);
     console.log(valorMensajeUsuario);
-    
     e.target.reset();
 }
 
