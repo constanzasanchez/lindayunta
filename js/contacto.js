@@ -10,31 +10,34 @@
 const formulario = document.getElementById("formulario");
 
 //formulario.addEventListener("submit", mostrarFormulario);
+//let valorNombreUsuario = nombreUsuario.value;
+//let valorApellidoUsuario = apellidoUsuario.value;
+//let valorEmailUsuario = emailUsuario.value;
+//let valorMensajeUsuario = mensajeUsuario.value;
 
-let valorNombreUsuario = nombreUsuario.value;
-let valorApellidoUsuario = apellidoUsuario.value;
-let valorEmailUsuario = emailUsuario.value;
-let valorMensajeUsuario = mensajeUsuario.value;
+//$('#formulario').click(function(){
+//}); 
 
-$('#formulario').click(function(){
-    mostrarFormulario();
-}); 
+//Utilizo Jquery para mostrar los datos que se guardan en consola
+
+$("#formulario").submit(function (e) { 
+    e.preventDefault();
+    console.log(nombreUsuario.value);
+    console.log(apellidoUsuario.value);
+    console.log(emailUsuario.value);
+    console.log(mensajeUsuario.value);
+    e.target.reset();
+});
 
 $('#formulario').keypress(function(e) {
     if(e.which == 13) {
-        mostrarFormulario();
-    }
- });
-
-function mostrarFormulario(e) {
-    e.preventDefault();
-    console.log("Formulario enviado:");
-    console.log(valorNombreUsuario);
-    console.log(valorApellidoUsuario);
-    console.log(valorEmailUsuario);
-    console.log(valorMensajeUsuario);
-    e.target.reset();
-}
+        e.preventDefault();
+        console.log(nombreUsuario.value);
+        console.log(apellidoUsuario.value);
+        console.log(emailUsuario.value);
+        console.log(mensajeUsuario.value);
+        e.target.reset();}
+});
 
 //Agrego un color gris cuando se completa el campo 
 
