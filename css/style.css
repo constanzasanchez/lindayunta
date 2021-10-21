@@ -208,18 +208,20 @@ header {
     margin-bottom: 40px;
     text-align: center;
     font-weight: 300; }
-  .productos .col {
-    text-align: center; }
-    .productos .col .btn-comprar {
-      padding: 10px 20px;
-      border: 2px solid #000;
-      border-radius: 5px;
-      background-color: #fff;
-      color: black; }
-    .productos .col .btn-comprar:hover {
-      background-color: #b0949c;
-      color: #fff;
-      border: 2px solid #fff; }
+  .productos #contenedorProductos {
+    padding: 20px 0; }
+    .productos #contenedorProductos .col {
+      text-align: center; }
+      .productos #contenedorProductos .col .btn-comprar {
+        padding: 10px 20px;
+        border: 2px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        color: black; }
+      .productos #contenedorProductos .col .btn-comprar:hover {
+        background-color: #b0949c;
+        color: #fff;
+        border: 2px solid #fff; }
 
 .modal-contenedor {
   z-index: 2;

@@ -33,3 +33,5 @@ selectTipos.addEventListener('change', ()=>{
 selectPrecios.addEventListener('change', ()=>{
     filtrar();
 });
+
+

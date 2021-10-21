@@ -9,17 +9,8 @@
 
 const formulario = document.getElementById("formulario");
 
-//formulario.addEventListener("submit", mostrarFormulario);
-//let valorNombreUsuario = nombreUsuario.value;
-//let valorApellidoUsuario = apellidoUsuario.value;
-//let valorEmailUsuario = emailUsuario.value;
-//let valorMensajeUsuario = mensajeUsuario.value;
-
-//$('#formulario').click(function(){
-//}); 
-
-//Utilizo Jquery para mostrar los datos que se guardan en consola
-
+//Guardo en consola los datos del usuario ingresado y una vez que
+//se vuelve a cargar la pagina se reinician los datos
 $("#formulario").submit(function (e) { 
     e.preventDefault();
     console.log(nombreUsuario.value);
@@ -29,6 +20,7 @@ $("#formulario").submit(function (e) {
     e.target.reset();
 });
 
+//Se realiza lo mismo con la tecla ENTER
 $('#formulario').keypress(function(e) {
     if(e.which == 13) {
         e.preventDefault();
@@ -36,7 +28,8 @@ $('#formulario').keypress(function(e) {
         console.log(apellidoUsuario.value);
         console.log(emailUsuario.value);
         console.log(mensajeUsuario.value);
-        e.target.reset();}
+        e.target.reset();
+    }
 });
 
 //Agrego un color gris cuando se completa el campo 
