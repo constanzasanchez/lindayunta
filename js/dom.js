@@ -7,7 +7,7 @@ const cargarProductos = async () => {
   showProducts(allProducts);
 }
 
-cargarProductos()
+cargarProductos();
 
 //Accedo a la seccion productos para crear las cards de cada producto automaticamente
 const contenedorProductos = document.getElementById('contenedorProductos');
