@@ -1,13 +1,21 @@
+//Cargo los productos que tengo en el Array segun stock
+const cargarProductos = async () => {
+  const resp = await fetch('stock.json');
+  const data = await resp.json();
+
+  allProducts = data;
+  showProducts(allProducts);
+}
+
+cargarProductos()
+
 //Accedo a la seccion productos para crear las cards de cada producto automaticamente
 const contenedorProductos = document.getElementById('contenedorProductos');
-
 
 const showProducts = (array) => {
   contenedorProductos.innerHTML = '';
   array.forEach((producto) => {
-  //Agrego Iva
-  //producto.precio = producto.precio * 1.21;
-  //Agrego divs por cada producto que esta en el array  
+   //Agrego divs por cada producto que esta en el array  
   const div = document.createElement('div');
   div.className = "col";
   div.innerHTML = `<div class="card">
