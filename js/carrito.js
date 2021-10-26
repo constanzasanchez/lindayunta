@@ -30,7 +30,7 @@ const actualizarCarrito = () => {
     if (cart.length == 0) {
         const div = document.createElement('div');
         div.classList.add('sinProductoEnCarrito');
-        div.innerHTML = `<p>Tu carrito está vacio</p>`
+        div.innerHTML = `<p>Tu carrito está vacio</p>`;
         contenedorCarrito.appendChild(div);
     } else {
     cart.forEach((prod) => {
@@ -49,7 +49,7 @@ const actualizarCarrito = () => {
              `
         contenedorCarrito.appendChild(div);
     })}
-    
+
     contadorCarrito.innerText = cart.length;
     cart.reduce((acc, prod) => acc += prod.cantidad, 0);
     precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
