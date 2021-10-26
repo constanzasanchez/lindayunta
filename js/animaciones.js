@@ -1,11 +1,4 @@
-$(document).ready( () => {
-    setTimeout( () => {
-    $('.loader')
-    .css({
-    opacity: 0,
-    visibility: "hidden"})
-    }, 1000);
-})
+//Animaciones para el loader
 
 //Animaciones para el texto Yunta
 $("#textoFade").fadeOut("slow", function(){

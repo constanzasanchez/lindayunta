@@ -42,3 +42,53 @@ emailUsuario.addEventListener("focusin",() => {
     emailUsuario.style.backgroundColor = "#E3E4E5"});
 mensajeUsuario.addEventListener("focusin",() => {
     mensajeUsuario.style.backgroundColor = "#E3E4E5"});
+
+//Agrego colores si el usuario escribe mas de 3 letras
+$('#nombre').on('input', () => {
+    const val = $('#nombre').val().trim();
+  
+    if ( val.length <= 3 ) {
+        $('#nombre').addClass('invalido');
+        $('#nombre').removeClass('valido');
+    } else {
+        $('#nombre').addClass('valido');
+        $('#nombre').removeClass('invalido');
+    }   
+    });
+
+$('#apellido').on('input', () => {
+    const val = $('#apellido').val().trim();
+  
+    if ( val.length <= 3 ) {
+        $('#apellido').addClass('invalido');
+        $('#apellido').removeClass('valido');
+    } else {
+        $('#apellido').addClass('valido');
+        $('#apellido').removeClass('invalido');
+    }   
+    });
+
+$('#email').on('input', () => {
+    const val = $('#email').val().trim();
+  
+    if ( val.length <= 3 ) {
+        $('#email').addClass('invalido');
+        $('#email').removeClass('valido');
+    } else {
+        $('#email').addClass('valido');
+        $('#email').removeClass('invalido');
+    }   
+    });
+
+$('#msj').on('input', () => {
+    const val = $('#msj').val().trim();
+  
+    if ( val.length <= 3 ) {
+        $('#msj').addClass('invalido');
+        $('#msj').removeClass('valido');
+    } else {
+        $('#msj').addClass('valido');
+        $('#msj').removeClass('invalido');
+    }   
+    });
+    
