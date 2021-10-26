@@ -1,6 +1,6 @@
 //Cargo los productos que tengo en el Array segun stock
 const cargarProductos = async () => {
-  const resp = await fetch('stock.json');
+  const resp = await fetch('./stock.json');
   const data = await resp.json();
 
   allProducts = data;
