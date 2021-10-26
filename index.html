@@ -25,8 +25,11 @@
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--Typed.js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!--Links Javascript-->
     <script defer src="js/loader.js"></script>
+    <script defer src="js/typed.js"></script>
     <script defer src="js/productos.js"></script>
     <script defer src="js/storage.js"></script>
     <script defer src="js/dom.js"></script>
@@ -41,8 +44,8 @@
 <body>
     <!--Comienza Loader-->
     <div class="loader">
-        <img src="img/logo.png">
-        <h2>Cargando...</h2>
+        <img src="img/logo.png" id="loaderImg">
+        <h2 id="loaderText"><span class="typed"></span></h2>
     </div>
     <!--Finaliza Loader-->
     <!--Comienza Header-->
