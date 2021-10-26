@@ -49,7 +49,7 @@ const actualizarCarrito = () => {
              `
         contenedorCarrito.appendChild(div);
     })}
-
+    
     contadorCarrito.innerText = cart.length;
     cart.reduce((acc, prod) => acc += prod.cantidad, 0);
     precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
