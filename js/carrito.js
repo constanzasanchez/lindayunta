@@ -19,14 +19,24 @@ const agregarAlCarrito = (itemId) => {
             precio: producto.precio,
             cantidad: 1
         });
-    }
+}
+    //Guardo los productos del carrito en Local Storage
+    for (const producto of cart) {
+        storeProducts (producto.id, JSON.stringify(producto));}
     console.log(cart);
-    actualizarCarrito();}
+    actualizarCarrito();
+}
 
-//Creo funcion para visualizar los productos que agrego al carrito
+//Creo funcion para visualizar los productos que agrego al carrito, si no hay productos el carrito dice que esta vacio
 const actualizarCarrito = () => {
-    contenedorCarrito.innerHTML = ""
-
+    contenedorCarrito.innerHTML = "";
+    
+    if (cart.length == 0) {
+        const div = document.createElement('div');
+        div.classList.add('sinProductoEnCarrito');
+        div.innerHTML = `<p>Tu carrito está vacio</p>`
+        contenedorCarrito.appendChild(div);
+    } else {
     cart.forEach((prod) => {
         const div = document.createElement('div');
         div.classList.add('productoEnCarrito');
@@ -42,11 +52,10 @@ const actualizarCarrito = () => {
                 </path></svg></button>
              `
         contenedorCarrito.appendChild(div);
-    })
-
-    contadorCarrito.innerText = cart.length;
-    //cart.reduce((acc, prod) => acc += prod.cantidad, 0);
-    precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
+        contadorCarrito.innerText = cart.length;
+        cart.reduce((acc, prod) => acc += prod.cantidad, 0);
+        precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
+    })}
 }
 
 //Eliminar productos
@@ -61,3 +70,4 @@ const eliminarProducto = (itemId) => {
     }   
     actualizarCarrito();
 }
+

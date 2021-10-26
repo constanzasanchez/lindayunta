@@ -2,7 +2,7 @@
 const storeProducts = (clave, valor) => {
     localStorage.setItem(clave, valor)};
 
-//Aplico la funcion por cada producto de mi array 
+//Aplico la funcion por cada producto de mi array productos
 for (const producto of allProducts) {
     storeProducts (producto.id, JSON.stringify(producto));
 }
