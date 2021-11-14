@@ -12,22 +12,19 @@ const agregarAlCarrito = (itemId) => {
     if (productoEnCarrito) {
         productoEnCarrito.cantidad += 1;
     } else {
-        let {id, nombre, precio} = allProducts.find( el => el.id == itemId )
-        cart.push({id: id, nombre: nombre, precio: precio, cantidad: 1})
+        let {id, nombre, precio} = allProducts.find( el => el.id == itemId);
+        cart.push({id: id, nombre: nombre, precio: precio, cantidad: 1});
     }
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
     console.log(cart);
     actualizarCarrito();
 }
     
 
-
 //Creo funcion para visualizar los productos que agrego al carrito, si no hay productos el carrito dice que esta vacio
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = "";
     
-    if (cart.length == 0) {
+    if (cart.length === 0) {
         const div = document.createElement('div');
         div.classList.add('sinProductoEnCarrito');
         div.innerHTML = `<p>Tu carrito está vacio</p>`;
@@ -50,6 +47,8 @@ const actualizarCarrito = () => {
         contenedorCarrito.appendChild(div);
     })}
 
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
     contadorCarrito.innerText = cart.length;
     cart.reduce((acc, prod) => acc += prod.cantidad, 0);
     precioTotal.innerText = cart.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0);
